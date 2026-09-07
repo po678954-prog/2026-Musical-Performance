@@ -1,0 +1,6 @@
+{
+  "name": "人子的故事",
+  "description": "2026《人子的故事》節目單與樂譜，收錄演出節目單、21 首歌曲介紹、演出影片與樂譜下載。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

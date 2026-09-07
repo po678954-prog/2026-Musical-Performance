@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #FDFCFB;
+    color: #333333;
+  }
+
+  h1, h2, h3, h4, .font-serif-title {
+    font-family: "Noto Serif TC", "Songti TC", Georgia, serif;
+  }
+}
+
+/* Clean Minimalism scrollbars */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #E5E1DA;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #8B7E66;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Print styles for sheet music printing */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .printable-score, .printable-score * {
+    visibility: visible;
+  }
+  .printable-score {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
